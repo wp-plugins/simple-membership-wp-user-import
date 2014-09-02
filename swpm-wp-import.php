@@ -5,10 +5,10 @@ Plugin URI: https://simple-membership-plugin.com/
 Description: Addon for importing existing Wordpress users to Simple Membership
 Author: wp.insider
 Author URI: https://simple-membership-plugin.com/
-Version: 1.0
+Version: 1.1
 */
 
-define( 'SWPM_WP_IMPORT_VERSION', '1.0.0' );
+define( 'SWPM_WP_IMPORT_VERSION', '1.1' );
 define('SWPM_WP_IMPORT_PATH', dirname(__FILE__) . '/');
 define('SWPM_WP_IMPORT_URL', plugins_url('',__FILE__));
 require_once ('classes/class.swpm-wp-import.php');
