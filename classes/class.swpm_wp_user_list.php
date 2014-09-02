@@ -1,5 +1,5 @@
 <?php
-
+if(!class_exists('WP_List_Table')) {require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');}
 class SwpmWpUserList extends WP_List_Table {
     private $membership_level_dropdown;
     function __construct() {
