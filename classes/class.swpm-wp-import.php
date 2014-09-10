@@ -15,7 +15,7 @@
 class SwpmWpImport {
     public function __construct() {
         if (class_exists('SimpleWpMembership')) {
-            add_action('admin_menu', array(&$this, 'admin_menu'));
+            add_action('swpm_after_main_admin_menu', array(&$this, 'user_import_do_admin_menu' ) );
             add_action('load-wp-membership_page_swpm-wp-import', array(&$this, 'library'));
         }
     }
@@ -23,12 +23,8 @@ class SwpmWpImport {
         wp_enqueue_style('jquery.tools.dateinput', SIMPLE_WP_MEMBERSHIP_URL . '/css/jquery.tools.dateinput.css');
         wp_enqueue_script('jquery.tools', SIMPLE_WP_MEMBERSHIP_URL . '/js/jquery.tools18.min.js');
     }
-    public function admin_menu(){
-        add_submenu_page('simple_wp_membership',
-                __('WP User Import', 'swpm-wp-import'),
-                __('WP User Import', 'swpm-wp-import'),
-                'manage_options',
-                'swpm-wp-import', array(&$this, 'admin'));
+    public function user_import_do_admin_menu($menu_parent_slug){
+        add_submenu_page($menu_parent_slug, __("WP User Import", 'swpm'), __("WP User Import", 'swpm'), 'manage_options', 'swpm-wp-import', array(&$this, 'admin'));
     }
     public function admin(){
         $this->add();
