@@ -3,8 +3,8 @@ Contributors: smp7, wp.insider
 Donate link: https://simple-membership-plugin.com/
 Tags: users, wp user, import, export, member, members, membership, access, level
 Requires at least: 3.8
-Tested up to: 3.9
-Stable tag: 1.1
+Tested up to: 4.0
+Stable tag: 1.2
 License: GPLv2 or later
 
 An addon for importing existing WordPress users to the Simple Membership plugin as members
@@ -34,6 +34,10 @@ See the following page for screenshots:
 https://simple-membership-plugin.com/import-existing-wordpress-users-simple-membership-plugin/
 
 == Changelog ==
+
+= 1.2 =
+* Updated the addon's admin menu rendering code to be more robust.
+
 = 1.1 =
 * Added a check for list table inclusion.
 
