@@ -3,8 +3,8 @@ Contributors: smp7, wp.insider
 Donate link: https://simple-membership-plugin.com/
 Tags: users, wp user, import, export, member, members, membership, access, level
 Requires at least: 3.8
-Tested up to: 4.2
-Stable tag: 1.2
+Tested up to: 4.3
+Stable tag: 1.3
 License: GPLv2 or later
 
 An addon for importing existing WordPress users to the Simple Membership plugin as members
@@ -34,6 +34,9 @@ See the following page for screenshots:
 https://simple-membership-plugin.com/import-existing-wordpress-users-simple-membership-plugin/
 
 == Changelog ==
+
+= 1.3 =
+* Updated the function call to retrieve the IP address of the member.
 
 = 1.2 =
 * Updated the addon's admin menu rendering code to be more robust.

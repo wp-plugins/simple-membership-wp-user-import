@@ -1,4 +1,4 @@
-<div class="wrap"><h2>Simple Membership WP User Import v<?= SWPM_WP_IMPORT_VERSION ?></h2>
+<div class="wrap"><h2>Simple Membership WP User Import v<?php echo  SWPM_WP_IMPORT_VERSION ?></h2>
 <div class="wrap">
     <p>You can either import all of your WordPress users to Simple Membership in one go or selectively import users from this interface.</p>
     
@@ -23,7 +23,7 @@
                     </td>
                     <td>
                         <select name="wp_users_membership_level">
-                            <?= BUtils::membership_level_dropdown(); ?>
+                            <?php echo  BUtils::membership_level_dropdown(); ?>
                         </select>
                     </td>
                     <td>
@@ -53,7 +53,7 @@
             <label class="screen-reader-text" for="search_id-search-input">
                 search:</label>
             <input id="search_id-search-input" type="text" name="s" value="" />
-            <input id="search-submit" class="button" type="submit" name="" value="<?= BUtils::_('search')?>" />
+            <input id="search-submit" class="button" type="submit" name="" value="<?php echo  BUtils::_('search')?>" />
             <input type="hidden" name="page" value="my_list_test" />
         </p>
     </form>

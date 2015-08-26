@@ -37,7 +37,7 @@ class SwpmWpImport {
         }
         $action = filter_input(INPUT_POST, 'action');
         $action2 = filter_input(INPUT_POST, 'action2');
-        if ('add_selective' == $action || 'add_selective' == $action2){
+        if ('add_selective' == $action || 'add_selective' == $action2){ 
             foreach ($_POST['wp_users'] as $key=>$ID){
                 $user = new stdClass();
                 $user->ID = $ID;
@@ -92,7 +92,7 @@ class SwpmWpImport {
         $fields['country'] = '';
         $fields['gender'] = 'not specified';
         $fields['referrer'] = '';
-        $fields['last_accessed_from_ip'] = BTransfer::get_real_ip_addr();
+        $fields['last_accessed_from_ip'] = SwpmUtils::get_user_ip_address();
         $fields['subscription_starts'] = $row->subscription_starts;
         $fields['extra_info'] = '';
 
@@ -105,7 +105,6 @@ class SwpmWpImport {
             }
         }
         $user_exists = BUtils::swpm_username_exists($fields['user_name']);
-
         if ($user_exists) {
             return $wpdb->update($wpdb->prefix . "swpm_members_tbl",  $fields, array('member_id'=>$user_exists));
         } else {
